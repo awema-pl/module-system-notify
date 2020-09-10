@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notifications</title>
+
+    <link rel="dns-prefetch" href="https://cdn.pkgkit.com">
+    <link rel="preconnect" href="https://cdn.pkgkit.com">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="https://static.awema.pl/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://static.awema.pl/favicons/favicon-32x32.png">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdn.pkgkit.com/5cd207e2c94eb723c3307764a5693def/awema-pl/indigo-layout/v1.x.x/css/main.css">
+    <script>
+        const AWEMA_CONFIG = {
+            key: '5cd207e2c94eb723c3307764a5693def',
+            dev: true
+        }
+    </script>
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.pkgkit.com/5cd207e2c94eb723c3307764a5693def/awema-pl/base-js/v1.x.x/js/main.js"></script>
+</head>
+<body>
+
+    <div id="awema-app" class="mainwrapper">
+
+        <div class="frame">
+            <div class="frame__aside">
+                <div class="frame__aside-line">
+                    <h2 class="frame__aside-title">Example</h2>
+                </div>
+                <div class="frame__aside-nav">
+                    <button class="frame__aside-link" onclick="AWEMA.notify({ title: 'Title', message: 'Default (success) message' })">Notify default</button>
+
+                    <button class="frame__aside-link" @click="AWEMA.notify({ title: 'Title :', message: 'warning message!', status: 'warning', container: 'one' })">Notify one!</button>
+
+                    <button class="frame__aside-link" @click="AWEMA.notify({ message: 'Very long message here, about that Item was deleted', button: { text: 'Cancel', url: '/', method: 'get', sended: function() { AWEMA.notify('Sended callback') } }, status: 'danger', theme: ['inline', 'progress', 'rounded'], container: 'one' })">Notify with button!</button>
+
+                    <button class="frame__aside-link" @click="AWEMA.notify({ title: 'Title of no-stack message', message: 'No stack message', status: 'error', container: 'two' })">Notify two!</button>
+
+                    <button class="frame__aside-link" @click="AWEMA.notify({ title: 'Title of info message', message: 'The message', status: 'info', theme: 'default', container: 'one' })">Notify
+                        info!</button>
+                </div>
+            </div>
+            <div class="frame__right">
+                <div class="frame__content">
+
+                    <div class="line-btns">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <system-notify-container name="one" class="position-top-center" :config="{theme:'inline'}" stack="top"></system-notify-container>
+
+        <system-notify-container name="two" class="position-top-right" stack="false"></system-notify-container>
+
+    </div>
+</body>
+</html>

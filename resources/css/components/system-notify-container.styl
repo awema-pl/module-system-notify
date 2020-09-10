@@ -1,0 +1,46 @@
+.system-notify-container
+    list-style: none
+    padding: 0
+    margin: 0
+    
+    &[class*="position-"]
+        position: fixed
+        
+        max-height: 90vh // no calc fallback
+        max-height: 'calc(100vh - %s)' % ($gap * 2)
+        
+        max-width: 90% // no calc fallback
+        max-width: 'calc(100% - %s)' % ($gap * 2)
+        // overflow: auto
+        z-index: 100
+    
+    &.position-top-right
+        right: $gap
+        top: $gap
+    
+    &.position-top-left
+        left: $gap
+        top: $gap
+         
+    &.position-top-center
+        top: $gap
+        left: 50%
+        transform: translateX(-50%)
+    
+    &.position-bottom-right
+        right: $gap
+        bottom: $gap
+    
+    &.position-bottom-left
+        left: $gap
+        bottom: $gap
+
+    &.position-bottom-center
+        bottom: $gap
+        left: 50%
+        transform: translateX(-50%)
+
+    &__item
+        
+        & + &
+            margin-top: ($gap / 2)
