@@ -21,11 +21,11 @@ Replaces default `AWEMA.notify()` method (shows system alert).
 <html lang="en">
     <head>
         <!-- recommended -->
-        <link rel="dns-prefetch" href="https://cdn.pkgkit.com">
-        <link rel="preconnect" href="https://cdn.pkgkit.com">
+        <link rel="dns-prefetch" href="https://cdn.awema.pl">
+        <link rel="preconnect" href="https://cdn.awema.pl">
 
         <!-- notify styles (or you can use your own) -->
-        <link rel="stylesheet" href="https://cdn.pkgkit.com/API_KEY/awema-pl/module-system-notify/v1.x.x/css/main.css">
+        <link rel="stylesheet" href="https://cdn.awema.pl/API_KEY/awema-pl/module-system-notify/v1.x.x/css/main.css">
 
         <!-- config -->
         <script>
@@ -38,10 +38,10 @@ Replaces default `AWEMA.notify()` method (shows system alert).
         </script>
 
         <!-- core (required) -->
-        <script async src="https://cdn.pkgkit.com/API_KEY/awema-pl/base-js/v1.x.x/js/main.js"></script>
+        <script async src="https://cdn.awema.pl/API_KEY/awema-pl/base-js/v1.x.x/js/main.js"></script>
 
         <!-- notify script (required) -->
-        <script async src="https://cdn.pkgkit.com/API_KEY/awema-pl/module-system-notify/v1.x.x/js/main.js"></script>
+        <script async src="https://cdn.awema.pl/API_KEY/awema-pl/module-system-notify/v1.x.x/js/main.js"></script>
     </head>
     <body>
 
