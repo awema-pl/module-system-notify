@@ -1,6 +1,6 @@
 {
     "name": "awema-pl/module-system-notify",
-    "description": ":description",
+    "description": "Module for display notifications in theme.",
     "type": "library",
     "license": "MIT",
     "authors": [
