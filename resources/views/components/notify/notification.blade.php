@@ -1,3 +1,4 @@
+@if($name !== 'notify')
 <system-notify-container
     @if(!empty($class))
     class="{{ $class }}"
@@ -10,3 +11,9 @@
     @endif>
         @isset($slot){!! $slot !!}@endisset
     </system-notify-container>
+@else
+    <script type="application/javascript">
+        console.log('config',{{$name}});
+    </script>
+@endif
+

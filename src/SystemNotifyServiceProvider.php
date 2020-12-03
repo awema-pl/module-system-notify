@@ -2,6 +2,7 @@
 
 namespace AwemaPL\SystemNotify;
 
+use AwemaPL\Auth\Contracts\Auth as AuthContract;
 use AwemaPL\SystemNotify\Notify;
 use AwemaPL\BaseJS\AwemaProvider;
 use Illuminate\Support\Facades\Blade;
@@ -13,6 +14,8 @@ class SystemNotifyServiceProvider extends AwemaProvider
         $this->registerHelpers();
 
         $this->registerDirectives();
+
+   
 
         parent::boot();
     }
