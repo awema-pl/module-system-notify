@@ -13,6 +13,9 @@ const awemaPlugin = {
         AWEMA.lang = lang
         Vue.use(plugin)
         awemaInit()
+        AWEMA.on('spa::page_loaded', function(){
+            awemaInit()
+        })
     }
 }
 
